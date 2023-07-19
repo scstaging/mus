@@ -6,33 +6,55 @@
 body {
     font-family: 'Titillium Web', sans-serif;
     background-color: #ffffff;
+    background-color: rgb(14, 14, 14);
 }
 
 .homepage {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
-    background-image: url('assets/Background.jpg');
-    background-position: center;
-    background-size: cover;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
 }
 
 .right {
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-
-.left {
-    height: 100%;
 }
 
 .left img {
     width: 100%;
+    display: inline-block;
+}
+
+.middle img {
+    width: 100%;
+    display: inline-block;
 }
 
 .right img {
     width: 100%;
+    display: inline-block;
+}
+
+/* CODE FOR ONHOVER EFFECTS */
+.content-overlay {
+    
 }
