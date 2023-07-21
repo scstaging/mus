@@ -32,6 +32,7 @@ body {
 .middle {
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 .right {
@@ -41,20 +42,81 @@ body {
 
 .left img {
     width: 100%;
-    display: inline-block;
+    transition: .8s;
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
 }
 
 .middle img {
     width: 100%;
-    display: inline-block;
+    transition: .8s;
+    transform: translate3d(0, 0, 0);
+    z-index: 3;
 }
 
 .right img {
     width: 100%;
-    display: inline-block;
 }
 
 /* CODE FOR ONHOVER EFFECTS */
 .content-overlay {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.inner-text {
+    position: absolute;
+    color: white;
+    font-size: max(100%, 20px);
+    width: 22%;
+    font-weight: 200;
+    cursor: default;
+    opacity: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+/* Fade Ins (TEXT) */
+.fade-left {
+    transform: translate3d(-50px, 0, 0);
+}
+
+.fade-right {
+    transform: translate3d(50px, 0, 0);
+}
+
+.fade-up {
+    transform: translate3d(0, 50px, 0);
+}
+/* End Fade Ins */
+
+/* Fade Ins (IMAGE) */
+.content-overlay:hover > .fade-right-img {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+}
+
+.content-overlay:hover > .fade-left-img {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+}
+
+.content-overlay:hover > .fade-up-img {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+}
+/* End Fade Ins */
+
+.content-overlay:hover > .inner-text {
+    opacity: 1;
+    transition: 1s all ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Responsive Left */
+@media only screen and (max-width: 3840px) {
+    .inner-text {
+        line-height: 60px;
+    }
 }
