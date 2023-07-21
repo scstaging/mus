@@ -44,14 +44,14 @@ body {
     width: 100%;
     transition: .8s;
     transform: translate3d(0, 0, 0);
-    z-index: 2;
+    z-index: 3;
 }
 
 .middle img {
     width: 100%;
     transition: .8s;
     transform: translate3d(0, 0, 0);
-    z-index: 3;
+    z-index: 4;
 }
 
 .right img {
@@ -69,9 +69,9 @@ body {
 .inner-text {
     position: absolute;
     color: white;
-    font-size: max(100%, 20px);
     width: 22%;
     font-weight: 200;
+    line-height: 60px;
     cursor: default;
     opacity: 0;
     transition: 0.2s all ease-in-out;
@@ -112,11 +112,4 @@ body {
     opacity: 1;
     transition: 1s all ease-in-out;
     transform: translate3d(0, 0, 0);
-}
-
-/* Responsive Left */
-@media only screen and (max-width: 3840px) {
-    .inner-text {
-        line-height: 60px;
-    }
 }
