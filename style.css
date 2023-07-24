@@ -23,18 +23,21 @@ body {
     background-color: black;
     flex-direction: row;
     width: 100%;
+    padding-left: 1.5%;
 }
 
 .left {
     display: flex;
     flex-direction: column;
     background-color: black;
+    z-index: 3;
 }
 
 .middle {
     display: flex;
     flex-direction: column;
     background-color: black;
+    z-index: 4;
 }
 
 .right {
@@ -60,6 +63,7 @@ body {
     width: 97%;
     transition: .8s;
     transform: translate3d(0, 0, 0);
+    padding-right: 2%;
 }
 
 /* CODE FOR ONHOVER EFFECTS */

@@ -7,6 +7,9 @@ const variableFontSize = document.querySelectorAll('.inner-text');
 // overlay text right
 const variableFontSizeRight = document.querySelectorAll('.inner');
 
+// middle
+const middle = document.querySelector('.middle');
+
 // width of largest container
 let width = fontContainer.offsetWidth;
 
@@ -64,4 +67,15 @@ addEventListener('resize', (event) => {
     variableFontSizeRight.forEach(variableFontSizeRight => {
         resizeText(width, variableFontSizeRight);
     });
+})
+
+// Keep z-index throughout animation
+middle.addEventListener('mouseover', (event) => {
+    middle.style.zIndex = '2';
+})
+
+middle.addEventListener('mouseleave', (event) => {
+    setTimeout(() => {
+        middle.style.zIndex = '4';
+    }, 500)
 })
