@@ -4,6 +4,9 @@ const fontContainer = document.querySelector('.left');
 // overlay text
 const variableFontSize = document.querySelectorAll('.inner-text');
 
+// overlay text right
+const variableFontSizeRight = document.querySelectorAll('.inner');
+
 // width of largest container
 let width = fontContainer.offsetWidth;
 
@@ -44,9 +47,21 @@ addEventListener('load', (event) => {
     });
 })
 
+addEventListener('load', (event) => {
+    variableFontSizeRight.forEach(variableFontSizeRight => {
+        resizeText(width, variableFontSizeRight);
+    });
+})
+
 // resizes overlay text on every window resize
 addEventListener('resize', (event) => {
     variableFontSize.forEach(variableFontSize => {
         resizeText(width, variableFontSize);
+    });
+})
+
+addEventListener('resize', (event) => {
+    variableFontSizeRight.forEach(variableFontSizeRight => {
+        resizeText(width, variableFontSizeRight);
     });
 })
