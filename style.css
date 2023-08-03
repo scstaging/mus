@@ -156,3 +156,8 @@ body {
     transition: 1s all ease-in-out;
     transform: translate3d(0, 0, 0);
 }
+
+.video-overlay:hover {
+    opacity: .2;
+    cursor: pointer;
+}
